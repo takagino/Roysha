@@ -1,0 +1,317 @@
+$color-text: #6C6C6F;
+$color-bg: #123D88;
+$color-bg2: #F7FAFF;
+$color-bg3: #505050;
+$color-title: #262934;
+$color-main: #256BE6;
+$color-accent: #2DBE61;
+$color-accent2: #F87624;
+
+@mixin inner($w: 1200px) {
+  width: 88%;
+  max-width: $w;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin flex($a: center, $j: space-between) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $j;
+  align-items: $a;
+}
+
+@mixin py($y: 80px) {
+  padding-top: $y;
+  padding-bottom: $y;
+}
+
+/* BASE
+---------------------------------*/
+//このコメントは消えます
+body {
+  color: $color-text;
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: (28/16);
+  letter-spacing: 0;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* BLOCK
+---------------------------------*/
+/* header */
+.header {
+  @include py(30px);
+  background-color: $color-bg;
+
+  &__inner {
+    @include inner();
+  }
+}
+
+/* footer */
+.footer {
+  @include py(30px);
+  background-color: $color-bg;
+  text-align: right;
+
+  &__inner {
+    @include inner();
+  }
+
+  &__copy {
+    color: #fff;
+    font-size: 15px;
+  }
+}
+
+/* unit */
+.unit {
+  &__catch {
+    margin-bottom: 20px;
+    color: $color-main;
+    font-size: 14px;
+    letter-spacing: (50/1000) + em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    color: $color-title;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: (48/36);
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+
+  &--center {
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+    .btn {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &--white {
+    color: #fff;
+
+    .unit__title {
+      color: #fff;
+    }
+  }
+}
+
+/* card */
+.card {
+  &__icon {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    color: $color-title;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: (28/22);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .btn {
+    margin-top: 40px;
+  }
+
+  &--center {
+    text-align: center;
+
+    .card__icon {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .btn {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &--space {
+    padding: 40px;
+    background-color: #fff;
+  }
+}
+
+/* btn */
+.btn {
+  display: block;
+  width: 200px;
+  margin-top: 60px;
+  padding: 20px 0;
+  background-color: $color-main;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: (25/1000) + em;
+  text-align: center;
+  border-radius: 27.5px;
+
+  &--info {
+    background-color: $color-accent;
+  }
+
+  &--warning {
+    background-color: $color-accent2;
+  }
+
+  &--outline {
+    border: 1px solid;
+    background-color: transparent;
+  }
+}
+
+/* INDEX
+---------------------------------*/
+/* fetures */
+.features {
+  @include py();
+
+  &__inner {
+    @include inner();
+    @include flex();
+  }
+
+  &__info {
+    width: 46%;
+  }
+
+  &__list {
+    width: 46%;
+    margin-bottom: -70px;
+    @include flex();
+  }
+
+  &__item {
+    width: 46%;
+    margin-bottom: 70px;
+  }
+}
+
+/* payment */
+.payment {
+  @include py();
+  background-color: $color-bg2;
+
+  &__inner {
+    @include inner();
+    @include flex();
+    flex-direction: row-reverse;
+  }
+
+  &__info {
+    width: 46%;
+  }
+
+  &__visual {
+    width: 46%;
+  }
+}
+
+/* SERVICE
+---------------------------------*/
+/* wedo */
+.wedo {
+  @include py();
+
+  &__inner {
+    @include inner();
+  }
+
+  &__list {
+    padding: 60px;
+    background-color: $color-bg2;
+    @include flex();
+  }
+
+  &__item {
+    width: 30%;
+  }
+}
+
+/* offer */
+.offer {
+  @include py();
+  background-color: $color-bg3;
+}
+
+.offer__inner {
+  @include inner();
+}
+
+/* HELP
+---------------------------------*/
+/* fees */
+.fees {
+  @include py();
+
+  &__inner {
+    @include inner();
+  }
+
+  &__list {
+    @include flex();
+  }
+
+  &__item {
+    width: 30%;
+  }
+}
+
+/* ask */
+.ask {
+  @include py();
+  background-color: $color-bg;
+
+  &__inner {
+    @include inner();
+  }
+}
+
+/* question */
+.question {
+  @include py();
+
+  &__inner {
+    @include inner();
+    @include flex();
+    flex-direction: row-reverse;
+  }
+
+  &__info {
+    width: 46%;
+  }
+
+  &__list {
+    width: 46%;
+    margin-bottom: -46px;
+    @include flex(stretch);
+  }
+
+  &__item {
+    width: 46%;
+    margin-bottom: 46px;
+    border: 1px solid #6C6C6F;
+  }
+}
