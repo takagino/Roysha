@@ -50,6 +50,12 @@ ul {
   align-items: center;
 }
 
+.l-max-w {
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 /* 背景色 */
 .l-bg-blue {
   color: #fff;
@@ -63,6 +69,14 @@ ul {
 /* 余白 */
 .l-mb-18 {
   margin-bottom: 72px;
+}
+
+.l-p-15 {
+  padding: 60px;
+}
+
+.l-pb-10 {
+  padding-bottom: 40px;
 }
 
 .l-py-8 {
