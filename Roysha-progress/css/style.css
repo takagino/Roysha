@@ -33,3 +33,23 @@ ul {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* 背景色 */
+.l-bg-blue {
+  color: #fff;
+  background-color: #123D88;
+}
+
+/* 余白 */
+.l-py-8 {
+  padding: 32px 0;
+}
+
+/* テキスト */
+.l-text-center {
+  text-align: center;
+}
+
+.l-text-right {
+  text-align: right;
+}
