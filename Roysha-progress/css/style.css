@@ -53,3 +53,14 @@ ul {
 .l-text-right {
   text-align: right;
 }
+
+/* モジュール
+---------------------------*/
+/* card */
+.card-title {
+  margin: 40px 0 20px;
+  color: #2F2F35;
+  font-size: 22px;
+  font-weight: bold;
+  line-height: 1.3;
+}
