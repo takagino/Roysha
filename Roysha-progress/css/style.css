@@ -57,6 +57,10 @@ ul {
 }
 
 /* 余白 */
+.l-mb-18 {
+  margin-bottom: 72px;
+}
+
 .l-py-8 {
   padding: 32px 0;
 }
