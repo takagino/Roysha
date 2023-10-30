@@ -39,3 +39,22 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
+
+/* footer */
+.footer {
+  padding: 32px 0;
+  background-color: #123D88;
+  color: #fff;
+  text-align: right;
+}
+
+.footer__inner {
+  max-width: 1200px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.footer__copy {
+  font-size: 15px;
+}
