@@ -58,3 +58,26 @@ a {
 .footer__copy {
   font-size: 15px;
 }
+
+/* features */
+.features {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.features__inner {
+  max-width: 1200px;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.features__info {
+  width: 46%;
+}
+
+.features__list {
+  width: 46%;
+}
