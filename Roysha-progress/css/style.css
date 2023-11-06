@@ -1,7 +1,5 @@
 @charset "utf-8";
 
-/* ベース
--------------------------*/
 body {
   color: #6C6C6F;
   font-size: 16px;
@@ -25,7 +23,7 @@ a {
   text-decoration: none;
 }
 
-/* ブロック
+/* common
 -------------------------*/
 /* header */
 .header {
@@ -128,6 +126,8 @@ a {
   background-color: transparent;
 }
 
+/* index.html
+-------------------------*/
 /* features */
 .features {
   padding: 80px 0;
@@ -187,6 +187,8 @@ a {
   width: 46%;
 }
 
+/* service.html
+-------------------------*/
 /* wedo */
 .wedo {
   padding: 80px 0;
@@ -258,6 +260,8 @@ a {
   margin-right: auto;
 }
 
+/* help.html
+-------------------------*/
 /* transfer */
 .transfer {
   padding: 80px 0;
