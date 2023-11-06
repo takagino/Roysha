@@ -115,6 +115,10 @@ a {
   border-radius: 27.5px;
 }
 
+.btn--info {
+  background-color: #2DBE61;
+}
+
 /* features */
 .features {
   padding: 80px 0;
