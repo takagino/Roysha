@@ -1,20 +1,28 @@
-/* BASE
----------------------------------*/
 body {
   color: #6C6C6F;
   font-size: 16px;
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.75;
   letter-spacing: 0;
-  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
 }
 
 a {
   text-decoration: none;
 }
 
-/* BLOCK
----------------------------------*/
+/* common
+-------------------------*/
 /* header */
 .header {
   padding-top: 30px;
@@ -22,7 +30,7 @@ a {
   background-color: #123D88;
 }
 .header__inner {
-  width: 88%;
+  width: 90%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -30,19 +38,19 @@ a {
 
 /* footer */
 .footer {
-  padding-top: 30px;
-  padding-bottom: 30px;
+  padding-top: 32px;
+  padding-bottom: 32px;
   background-color: #123D88;
+  color: #fff;
   text-align: right;
 }
 .footer__inner {
-  width: 88%;
+  width: 90%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
-.footer__copy {
-  color: #fff;
+.footer____copy {
   font-size: 15px;
 }
 
@@ -64,22 +72,6 @@ a {
 .unit__text {
   margin-bottom: 40px;
 }
-.unit--center {
-  max-width: 700px;
-  margin-left: auto;
-  margin-right: auto;
-  text-align: center;
-}
-.unit--center .btn {
-  margin-left: auto;
-  margin-right: auto;
-}
-.unit--white {
-  color: #fff;
-}
-.unit--white .unit__title {
-  color: #fff;
-}
 
 /* card */
 .card__icon {
@@ -98,21 +90,6 @@ a {
 .card .btn {
   margin-top: 40px;
 }
-.card--center {
-  text-align: center;
-}
-.card--center .card__icon {
-  margin-left: auto;
-  margin-right: auto;
-}
-.card--center .btn {
-  margin-left: auto;
-  margin-right: auto;
-}
-.card--space {
-  padding: 40px;
-  background-color: #fff;
-}
 
 /* btn */
 .btn {
@@ -124,7 +101,7 @@ a {
   color: #fff;
   font-weight: bold;
   letter-spacing: 0.025em;
-  text-align: center;
+  letter-spacing: 0.025em;
   border-radius: 27.5px;
 }
 .btn--info {
@@ -138,15 +115,15 @@ a {
   background-color: transparent;
 }
 
-/* INDEX
----------------------------------*/
-/* fetures */
+/* index.html
+-------------------------*/
+/* features */
 .features {
   padding-top: 80px;
   padding-bottom: 80px;
 }
 .features__inner {
-  width: 88%;
+  width: 90%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -178,7 +155,7 @@ a {
   background-color: #F7FAFF;
 }
 .payment__inner {
-  width: 88%;
+  width: 90%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -195,29 +172,45 @@ a {
   width: 46%;
 }
 
-/* SERVICE
----------------------------------*/
+/* service.html
+-------------------------*/
 /* wedo */
 .wedo {
   padding-top: 80px;
   padding-bottom: 80px;
 }
 .wedo__inner {
-  width: 88%;
+  width: 90%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
+.wedo__info {
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  text-align: center;
+}
 .wedo__list {
-  padding: 60px;
-  background-color: #F7FAFF;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
+  padding: 60px;
+  background-color: #F7FAFF;
 }
 .wedo__item {
   width: 30%;
+  padding: 40px;
+  text-align: center;
+  background-color: #fff;
+}
+.wedo__item .card__icon,
+.wedo__item .btn {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* offer */
@@ -226,46 +219,60 @@ a {
   padding-bottom: 80px;
   background-color: #505050;
 }
-
 .offer__inner {
-  width: 88%;
+  width: 90%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
+.offer__info {
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  text-align: center;
+}
+.offer__info .unit__title {
+  color: #fff;
+}
+.offer__info .btn {
+  margin-left: auto;
+  margin-right: auto;
+}
 
-/* HELP
----------------------------------*/
-/* fees */
-.fees {
+/* help.html
+-------------------------*/
+/* transfer */
+.transfer {
   padding-top: 80px;
   padding-bottom: 80px;
 }
-.fees__inner {
-  width: 88%;
+.transfer__inner {
+  width: 90%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
 }
-.fees__list {
+.transfer__info {
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 40px;
+  text-align: center;
+}
+.transfer__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
 }
-.fees__item {
+.transfer__item {
   width: 30%;
+  text-align: center;
 }
-
-/* ask */
-.ask {
-  padding-top: 80px;
-  padding-bottom: 80px;
-  background-color: #123D88;
-}
-.ask__inner {
-  width: 88%;
-  max-width: 1200px;
+.transfer__item .card__icon {
   margin-left: auto;
   margin-right: auto;
 }
@@ -274,9 +281,37 @@ a {
 .question {
   padding-top: 80px;
   padding-bottom: 80px;
+  background-color: #123D88;
 }
 .question__inner {
-  width: 88%;
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.question__info {
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  color: #fff;
+  text-align: center;
+}
+.question__info .unit__title {
+  color: #fff;
+}
+.question__info .btn {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* asked */
+.asked {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.asked__inner {
+  width: 90%;
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
@@ -286,20 +321,25 @@ a {
   align-items: center;
   flex-direction: row-reverse;
 }
-.question__info {
+.asked__info {
   width: 46%;
 }
-.question__list {
-  width: 46%;
-  margin-bottom: -46px;
+.asked__list {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: stretch;
-}
-.question__item {
   width: 46%;
-  margin-bottom: 46px;
-  border: 1px solid #6C6C6F;
+  margin-bottom: -45px;
+}
+.asked__item {
+  width: 46%;
+  margin-bottom: 45px;
+  border: 1px solid;
+  text-align: center;
+}
+.asked__item .card__icon {
+  margin-left: auto;
+  margin-right: auto;
 }
 /*# sourceMappingURL=style.css.map */

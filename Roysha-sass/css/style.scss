@@ -1,15 +1,17 @@
+@charset "utf-8";
+
 $color-text: #6C6C6F;
-$color-bg: #123D88;
-$color-bg2: #F7FAFF;
-$color-bg3: #505050;
+$color-bg-blue: #123D88;
+$color-bg-sky: #F7FAFF;
+$color-bg-gray: #505050;
 $color-title: #262934;
 $color-main: #256BE6;
-$color-accent: #2DBE61;
-$color-accent2: #F87624;
+$color-info: #2DBE61;
+$color-warning: #F87624;
 
-@mixin inner($w: 1200px) {
-  width: 88%;
-  max-width: $w;
+@mixin inner($w: 90%, $mw: 1200px) {
+  width: $w;
+  max-width: $mw;
   margin-left: auto;
   margin-right: auto;
 }
@@ -26,28 +28,35 @@ $color-accent2: #F87624;
   padding-bottom: $y;
 }
 
-/* BASE
----------------------------------*/
-//このコメントは消えます
 body {
   color: $color-text;
   font-size: 16px;
   font-family: Helvetica, Arial, sans-serif;
   line-height: (28/16);
   letter-spacing: 0;
-  background-color: #fff;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
 }
 
 a {
   text-decoration: none;
 }
 
-/* BLOCK
----------------------------------*/
+/* common
+-------------------------*/
 /* header */
 .header {
   @include py(30px);
-  background-color: $color-bg;
+  background-color: $color-bg-blue;
 
   &__inner {
     @include inner();
@@ -56,22 +65,23 @@ a {
 
 /* footer */
 .footer {
-  @include py(30px);
-  background-color: $color-bg;
+  @include py(32px);
+  background-color: $color-bg-blue;
+  color: #fff;
   text-align: right;
 
   &__inner {
     @include inner();
   }
 
-  &__copy {
-    color: #fff;
+  &____copy {
     font-size: 15px;
   }
 }
 
 /* unit */
 .unit {
+
   &__catch {
     margin-bottom: 20px;
     color: $color-main;
@@ -90,26 +100,6 @@ a {
 
   &__text {
     margin-bottom: 40px;
-  }
-
-  &--center {
-    max-width: 700px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center;
-
-    .btn {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-  &--white {
-    color: #fff;
-
-    .unit__title {
-      color: #fff;
-    }
   }
 }
 
@@ -134,25 +124,6 @@ a {
   .btn {
     margin-top: 40px;
   }
-
-  &--center {
-    text-align: center;
-
-    .card__icon {
-      margin-left: auto;
-      margin-right: auto;
-    }
-
-    .btn {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-
-  &--space {
-    padding: 40px;
-    background-color: #fff;
-  }
 }
 
 /* btn */
@@ -164,16 +135,16 @@ a {
   background-color: $color-main;
   color: #fff;
   font-weight: bold;
+  letter-spacing: 0.025em;
   letter-spacing: (25/1000) + em;
-  text-align: center;
   border-radius: 27.5px;
 
   &--info {
-    background-color: $color-accent;
+    background-color: $color-info;
   }
 
   &--warning {
-    background-color: $color-accent2;
+    background-color: $color-warning;
   }
 
   &--outline {
@@ -182,9 +153,9 @@ a {
   }
 }
 
-/* INDEX
----------------------------------*/
-/* fetures */
+/* index.html
+-------------------------*/
+/* features */
 .features {
   @include py();
 
@@ -212,7 +183,7 @@ a {
 /* payment */
 .payment {
   @include py();
-  background-color: $color-bg2;
+  background-color: $color-bg-sky;
 
   &__inner {
     @include inner();
@@ -229,8 +200,8 @@ a {
   }
 }
 
-/* SERVICE
----------------------------------*/
+/* service.html
+-------------------------*/
 /* wedo */
 .wedo {
   @include py();
@@ -239,35 +210,71 @@ a {
     @include inner();
   }
 
+  &__info {
+    @include inner(100%, 700px);
+    margin-bottom: 40px;
+    text-align: center;
+  }
+
   &__list {
-    padding: 60px;
-    background-color: $color-bg2;
     @include flex();
+    padding: 60px;
+    background-color: $color-bg-sky;
   }
 
   &__item {
     width: 30%;
+    padding: 40px;
+    text-align: center;
+    background-color: #fff;
+
+    .card__icon,
+    .btn {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
 /* offer */
 .offer {
   @include py();
-  background-color: $color-bg3;
+  background-color: $color-bg-gray;
+
+  &__inner {
+    @include inner();
+  }
+
+  &__info {
+    @include inner(100%, 700px);
+    color: #fff;
+    text-align: center;
+
+    .unit__title {
+      color: #fff;
+    }
+
+    .btn {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
 }
 
-.offer__inner {
-  @include inner();
-}
-
-/* HELP
----------------------------------*/
-/* fees */
-.fees {
+/* help.html
+-------------------------*/
+/* transfer */
+.transfer {
   @include py();
 
   &__inner {
     @include inner();
+  }
+
+  &__info {
+    @include inner(100%, 700px);
+    margin-bottom: 40px;
+    text-align: center;
   }
 
   &__list {
@@ -276,21 +283,42 @@ a {
 
   &__item {
     width: 30%;
-  }
-}
+    text-align: center;
 
-/* ask */
-.ask {
-  @include py();
-  background-color: $color-bg;
-
-  &__inner {
-    @include inner();
+    .card__icon {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
 
 /* question */
 .question {
+  @include py();
+  background-color: $color-bg-blue;
+
+  &__inner {
+    @include inner();
+  }
+
+  &__info {
+    @include inner(100%, 700px);
+    color: #fff;
+    text-align: center;
+
+    .unit__title {
+      color: #fff;
+    }
+
+    .btn {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+}
+
+/* asked */
+.asked {
   @include py();
 
   &__inner {
@@ -304,14 +332,20 @@ a {
   }
 
   &__list {
-    width: 46%;
-    margin-bottom: -46px;
     @include flex(stretch);
+    width: 46%;
+    margin-bottom: -45px;
   }
 
   &__item {
     width: 46%;
-    margin-bottom: 46px;
-    border: 1px solid #6C6C6F;
+    margin-bottom: 45px;
+    border: 1px solid;
+    text-align: center;
+
+    .card__icon {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 }
