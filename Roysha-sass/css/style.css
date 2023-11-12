@@ -50,7 +50,7 @@ a {
   margin-left: auto;
   margin-right: auto;
 }
-.footer____copy {
+.footer__copy {
   font-size: 15px;
 }
 
@@ -144,7 +144,7 @@ a {
   align-items: center;
 }
 .features__item {
-  width: 46%;
+  width: 46.0144927536%;
   margin-bottom: 70px;
 }
 
@@ -333,7 +333,7 @@ a {
   margin-bottom: -45px;
 }
 .asked__item {
-  width: 46%;
+  width: 46.0144927536%;
   margin-bottom: 45px;
   border: 1px solid;
   text-align: center;

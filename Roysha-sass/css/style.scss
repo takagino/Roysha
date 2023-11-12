@@ -74,7 +74,7 @@ a {
     @include inner();
   }
 
-  &____copy {
+  &__copy {
     font-size: 15px;
   }
 }
@@ -86,7 +86,7 @@ a {
     margin-bottom: 20px;
     color: $color-main;
     font-size: 14px;
-    letter-spacing: (50/1000) + em;
+    letter-spacing: (50/1000) * 1em;
     text-transform: uppercase;
   }
 
@@ -136,7 +136,7 @@ a {
   color: #fff;
   font-weight: bold;
   letter-spacing: 0.025em;
-  letter-spacing: (25/1000) + em;
+  letter-spacing: (25/1000) * 1em;
   border-radius: 27.5px;
 
   &--info {
@@ -165,17 +165,17 @@ a {
   }
 
   &__info {
-    width: 46%;
+    width: (552 / 1200) * 100%;
   }
 
   &__list {
-    width: 46%;
+    width: (552 / 1200) * 100%;
     margin-bottom: -70px;
     @include flex();
   }
 
   &__item {
-    width: 46%;
+    width: (254 / 552) * 100%;
     margin-bottom: 70px;
   }
 }
@@ -192,11 +192,11 @@ a {
   }
 
   &__info {
-    width: 46%;
+    width: (552 / 1200) * 100%;
   }
 
   &__visual {
-    width: 46%;
+    width: (552 / 1200) * 100%;
   }
 }
 
@@ -223,7 +223,7 @@ a {
   }
 
   &__item {
-    width: 30%;
+    width: (324 / 1080) * 100%;
     padding: 40px;
     text-align: center;
     background-color: #fff;
@@ -282,7 +282,7 @@ a {
   }
 
   &__item {
-    width: 30%;
+    width: (360 / 1200) * 100%;
     text-align: center;
 
     .card__icon {
@@ -328,17 +328,17 @@ a {
   }
 
   &__info {
-    width: 46%;
+    width: (552 / 1200) * 100%;
   }
 
   &__list {
     @include flex(stretch);
-    width: 46%;
+    width: (552 / 1200) * 100%;
     margin-bottom: -45px;
   }
 
   &__item {
-    width: 46%;
+    width: (254 / 552) * 100%;
     margin-bottom: 45px;
     border: 1px solid;
     text-align: center;
