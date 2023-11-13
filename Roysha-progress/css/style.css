@@ -1,0 +1,27 @@
+body {
+  line-height: 1.75;
+  letter-spacing: 0;
+}
+
+.header {
+  background-color: #123D88;
+}
+.header__inner {
+  width: 90%;
+}
+
+.footer {
+  background-color: #123D88;
+}
+.footer__inner {
+  width: 90%;
+}
+.footer__copy {
+  font-size: 15px;
+}
+
+/* card */
+.card .btn {
+  margin-top: 40px;
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,33 @@
+$color-bg-blue: #123D88;
+
+body {
+  line-height: (28/16);
+  letter-spacing: 0;
+}
+
+.header {
+  background-color: $color-bg-blue;
+
+  &__inner {
+    width: 90%;
+  }
+}
+
+.footer {
+  background-color: $color-bg-blue;
+
+  &__inner {
+    width: 90%;
+  }
+
+  &__copy {
+    font-size: 15px;
+  }
+}
+
+/* card */
+.card {
+  .btn {
+    margin-top: 40px;
+  }
+}
