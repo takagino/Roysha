@@ -1,23 +1,44 @@
 $color-bg-blue: #123D88;
 
+@mixin inner($w: 90%, $mw: 1200px) {
+  width: $w;
+  max-width: $mw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@mixin flex($a: center, $j: space-between) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: $j;
+  align-items: $a;
+}
+
+@mixin py($y: 80px) {
+  padding-top: $y;
+  padding-bottom: $y;
+}
+
 body {
   line-height: (28/16);
   letter-spacing: 0;
 }
 
 .header {
+  @include py(30px);
   background-color: $color-bg-blue;
 
   &__inner {
-    width: 90%;
+    @include inner();
   }
 }
 
 .footer {
+  @include py(32px);
   background-color: $color-bg-blue;
 
   &__inner {
-    width: 90%;
+    @include inner();
   }
 
   &__copy {
@@ -29,5 +50,45 @@ body {
 .card {
   .btn {
     margin-top: 40px;
+  }
+}
+
+/* index.html
+-------------------------*/
+/* features */
+.features {
+  @include py();
+
+  &__inner {
+    @include flex();
+    @include inner();
+  }
+
+  &__info {
+    width: (552/1200)*100%;
+  }
+
+  &__list {
+    width: (552/1200)*100%;
+    margin-bottom: -70px;
+    @include flex();
+  }
+
+  &__item {
+    width: (254/552)*100%;
+    margin-bottom: 70px;
+  }
+}
+
+/* service.html
+-------------------------*/
+/* wedo */
+.wedo {
+  &__inner {
+    @include inner();
+  }
+
+  &__info {
+    @include inner(100%, 700px);
   }
 }

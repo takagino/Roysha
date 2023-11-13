@@ -4,17 +4,27 @@ body {
 }
 
 .header {
+  padding-top: 30px;
+  padding-bottom: 30px;
   background-color: #123D88;
 }
 .header__inner {
   width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .footer {
+  padding-top: 32px;
+  padding-bottom: 32px;
   background-color: #123D88;
 }
 .footer__inner {
   width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer__copy {
   font-size: 15px;
@@ -23,5 +33,54 @@ body {
 /* card */
 .card .btn {
   margin-top: 40px;
+}
+
+/* index.html
+-------------------------*/
+/* features */
+.features {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+.features__inner {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.features__info {
+  width: 46%;
+}
+.features__list {
+  width: 46%;
+  margin-bottom: -70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.features__item {
+  width: 46.0144927536%;
+  margin-bottom: 70px;
+}
+
+/* service.html
+-------------------------*/
+/* wedo */
+.wedo__inner {
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.wedo__info {
+  width: 100%;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 /*# sourceMappingURL=style.css.map */
