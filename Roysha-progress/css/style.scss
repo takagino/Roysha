@@ -1,4 +1,11 @@
 $color-bg-blue: #123D88;
+$color-bg-sky: #F7FAFF;
+$color-text: #6C6C6F;
+$color-title: #262934;
+$color-main: #256BE6;
+$color-info: #2DBE61;
+$color-warning: #F87624;
+
 
 @mixin inner($w: 90%, $mw: 1200px) {
   width: $w;
@@ -20,10 +27,31 @@ $color-bg-blue: #123D88;
 }
 
 body {
+  color: $color-text;
+  font-size: 16px;
+  font-family: Helvetica, Arial, sans-serif;
   line-height: (28/16);
   letter-spacing: 0;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* common
+-------------------------*/
+/* header */
 .header {
   @include py(30px);
   background-color: $color-bg-blue;
@@ -36,6 +64,8 @@ body {
 .footer {
   @include py(32px);
   background-color: $color-bg-blue;
+  color: #fff;
+  text-align: right;
 
   &__inner {
     @include inner();
@@ -46,10 +76,78 @@ body {
   }
 }
 
+/* unit */
+.unit {
+
+  &__catch {
+    margin-bottom: 20px;
+    color: $color-main;
+    font-size: 14px;
+    letter-spacing: (50/1000) + em;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    margin-bottom: 40px;
+    color: $color-title;
+    font-size: 36px;
+    font-weight: bold;
+    line-height: (48/36);
+  }
+
+  &__text {
+    margin-bottom: 40px;
+  }
+}
+
 /* card */
 .card {
+
+  &__icon {
+    margin-bottom: 40px;
+  }
+
+  &__title {
+    margin-bottom: 20px;
+    color: $color-title;
+    font-size: 22px;
+    font-weight: bold;
+    line-height: (28/22);
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
   .btn {
     margin-top: 40px;
+  }
+}
+
+/* btn */
+.btn {
+  display: block;
+  width: 200px;
+  margin-top: 60px;
+  padding: 20px 0;
+  background-color: $color-main;
+  color: #fff;
+  font-weight: bold;
+  letter-spacing: (25/1000) + em;
+  text-align: center;
+  border-radius: 27.5px;
+
+  &--info {
+    background-color: $color-info;
+  }
+
+  &--warning {
+    background-color: $color-warning;
+  }
+
+  &--outline {
+    border: 1px solid;
+    background-color: transparent;
   }
 }
 
@@ -77,6 +175,26 @@ body {
   &__item {
     width: (254/552)*100%;
     margin-bottom: 70px;
+  }
+}
+
+/* payment */
+.payment {
+  @include py();
+  background-color: $color-bg-sky;
+
+  &__inner {
+    @include flex();
+    @include inner();
+    flex-direction: row-reverse;
+  }
+
+  &__info {
+    width: (552/1200)*100%;
+  }
+
+  &__visual {
+    width: (552/1200)*100%;
   }
 }
 
