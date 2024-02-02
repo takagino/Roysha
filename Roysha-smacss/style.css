@@ -3,7 +3,7 @@
 /* BASE
 ------------------------*/
 body {
-  color: #6C6C6F;
+  color: #6c6c6f;
   font-size: 16px;
   font-family: Helvetica, Arial, sans-serif;
   line-height: 1.7;
@@ -75,11 +75,11 @@ img {
 /* color */
 .l-bg-blue {
   color: #fff;
-  background-color: #123D88;
+  background-color: #123d88;
 }
 
 .l-bg-sky {
-  background-color: #F7FAFF;
+  background-color: #f7faff;
 }
 
 .l-bg-gray {
@@ -119,9 +119,9 @@ img {
 /* MODULE
 ------------------------*/
 /* unit */
-.unit-catch {
+.unit-subtitle {
   margin-bottom: 20px;
-  color: #256BE6;
+  color: #256be6;
   font-size: 14px;
   letter-spacing: 0.05em;
   text-transform: uppercase;
@@ -135,6 +135,10 @@ img {
   line-height: 1.3;
 }
 
+.unit p {
+  margin-bottom: 40px;
+}
+
 /* card */
 .card-icon {
   margin-bottom: 40px;
@@ -142,7 +146,7 @@ img {
 
 .card-title {
   margin-bottom: 20px;
-  color: #2F2F35;
+  color: #2f2f35;
   font-size: 22px;
   font-weight: bold;
   line-height: 1.3;
@@ -159,7 +163,7 @@ img {
 
 .card-border {
   padding: 40px;
-  border: 1px solid #6C6C6F;
+  border: 1px solid #6c6c6f;
   background-color: #fff;
 }
 
@@ -173,7 +177,7 @@ img {
   width: 200px;
   margin-top: 60px;
   padding: 20px;
-  background-color: #256BE6;
+  background-color: #256be6;
   color: #fff;
   font-weight: bold;
   text-align: center;
@@ -183,11 +187,11 @@ img {
 }
 
 .btn-info {
-  background-color: #2DBE61;
+  background-color: #2dbe61;
 }
 
 .btn-caution {
-  background-color: #F87624;
+  background-color: #f87624;
 }
 
 .btn-outline {
